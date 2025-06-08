@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RandomizadorActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutAddCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true">
+
+        <EditText
+            android:id="@+id/editTextNovaCategoria"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/hint_nova_categoria"
+            android:minHeight="48dp"
+            android:inputType="textCapSentences"
+            android:autofillHints="name"
+            android:textColorHint="?android:attr/textColorSecondary" />
+
+        <Button
+            android:id="@+id/buttonAddCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            style="@style/BotaoVermelho"
+            android:text="@string/botao_add_categoria" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewLabelCategorias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_categorias"
+        android:layout_below="@id/layoutAddCategoria"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCategorias"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textViewLabelCategorias"
+        android:layout_above="@+id/buttonSortear"
+        android:contentDescription="@string/cd_lista_de_categorias"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_categoria"/>
+
+    <Button
+        android:id="@+id/buttonSortear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:textSize="18sp"
+        style="@style/BotaoVermelho"
+        android:text="@string/botao_sortear"/>
+
+</RelativeLayout>

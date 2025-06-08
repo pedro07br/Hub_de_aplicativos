@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".RPSActivity">
+
+    <TextView
+        android:id="@+id/textViewPlacar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/placar_inicial"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layoutArena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewJogador"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/cd_imagem_jogador"
+            tools:src="@drawable/papel"
+            tools:ignore="ImageContrast" /> <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_vs" android:textSize="20sp"
+        android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageViewIA"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/cd_imagem_ia"
+            tools:src="@drawable/tesoura"
+            tools:ignore="ImageContrast" /> </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewResultadoRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutArena"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:text="Você ganhou! :)" />
+
+    <TextView
+        android:id="@+id/textViewLabelEscolha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutEscolhas"
+        android:layout_centerHorizontal="true"
+        android:text="@string/escolha_uma_opcao"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutEscolhas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButtonPedra"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pedra"
+            android:contentDescription="@string/cd_escolha_pedra"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            tools:ignore="ImageContrast" /> <ImageButton
+        android:id="@+id/imageButtonPapel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/papel"
+        android:contentDescription="@string/cd_escolha_papel"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        tools:ignore="ImageContrast" /> <ImageButton
+        android:id="@+id/imageButtonTesoura"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tesoura"
+        android:contentDescription="@string/cd_escolha_tesoura"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        tools:ignore="ImageContrast" /> </LinearLayout>
+
+</RelativeLayout>

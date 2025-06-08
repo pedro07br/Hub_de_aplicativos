@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/dante"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/dante"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HubDeAplicativos"
+        tools:targetApi="31">
+        <activity
+            android:name=".ItensActivity"
+            android:exported="false"
+            android:parentActivityName=".RandomizadorActivity" />
+        <activity
+            android:name=".RandomizadorActivity"
+            android:exported="false"
+            android:label="@string/titulo_randomizador"
+            android:parentActivityName=".TelaSelecaoActivity" />
+        <activity
+            android:name=".SucessoCodigoActivity"
+            android:exported="false"
+            android:label="@string/titulo_sucesso_codigo"
+            android:parentActivityName=".CodigoSecretoActivity" />
+        <activity
+            android:name=".CodigoSecretoActivity"
+            android:exported="false"
+            android:label="@string/titulo_codigo_secreto"
+            android:parentActivityName=".TelaSelecaoActivity" />
+        <activity
+            android:name=".ResultadoRPSActivity"
+            android:exported="false"
+            android:label="@string/titulo_resultado_rps"
+            android:parentActivityName=".TelaSelecaoActivity" />
+        <activity
+            android:name=".RPSActivity"
+            android:exported="false"
+            android:label="@string/titulo_rps"
+            android:parentActivityName=".TelaSelecaoActivity" />
+        <activity
+            android:name=".ResultadoCodificadorActivity"
+            android:exported="false"
+            android:label="@string/titulo_resultado_codificador"
+            android:parentActivityName=".CodificadorActivity" />
+        <activity
+            android:name=".CodificadorActivity"
+            android:exported="false"
+            android:label="@string/titulo_codificador"
+            android:parentActivityName=".TelaSelecaoActivity" />
+        <activity
+            android:name=".TelaSelecaoActivity"
+            android:exported="false"
+            android:label="@string/titulo_tela_selecao"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
