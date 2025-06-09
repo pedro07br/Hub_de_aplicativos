@@ -56,6 +56,6 @@ O aplicativo principal serve como um menu para os seguintes mini-apps:
 
 ## Autor
 
-* **Nome:** [Gabriel Ykaro Rodrigues da Silva]
-* **Matrícula:** [20241012000255]
+* **Nome:** Gabriel Ykaro Rodrigues da Silva
+* **Matrícula:** 20241012000255
 * **Curso:** Análise e Desenvolvimento de Sistemas
